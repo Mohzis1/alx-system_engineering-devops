@@ -1,15 +1,11 @@
 #!/usr/bin/env bash
-
-#Creates a serverr
-
+# Creates a serverr
 SERVER="19.204.447.20"
 
-#Creates the username to use for the ssh connection
-
+# Creates the username to use for the ssh connection
 USERNAME="ubuntu"
 
-#Set the path to private key
-
+# Set the path to private key
 PRIVATE_KEY="~/.ssh/school"
 
 ssh -i ~/.ssh/school ubuntu@19.204.447.20

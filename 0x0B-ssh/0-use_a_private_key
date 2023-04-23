@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 #Creates a serverr
 SERVER="8.8.8.8"
 
@@ -8,4 +9,4 @@ USERNAME="ubuntu"
 #Set the path to private key
 PRIVATE_KEY="~/.ssh/school"
 
-ssh -i "~/.ssh/school" "ubuntu@8.8.8.8"
+ssh -i ~/.ssh/school ubuntu@8.8.8.8

@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Write a Bash script that creates an RSA key pair.
+PRIVATE_KEY="school"
+
+# Set number bit
+BITS="4096"
+
+# Betty passphrase
+KEY="betty"
+
+ssh-keygen -t rsa -b 4096 -P 'betty' -f school

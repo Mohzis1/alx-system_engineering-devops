@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Configures an ssh file
- User="ubuntu"
-    Hostname="19.204.447.20"
-    PreferredAuthentications="no"
-    IdentityFile="~/.ssh/school"
+
+User="ubuntu"
+Host="19.204.447.20"
+Authentications="no"
+IdentityFile="~/.ssh/school"
 

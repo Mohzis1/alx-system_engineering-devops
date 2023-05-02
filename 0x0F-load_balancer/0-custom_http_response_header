@@ -1,13 +1,7 @@
 #!/usr/bin/env bash
-# configures web-02 to be identical to web-01
-# The name of custom HTTP header must be X-Served-By
-# The value of custom HTTP header must be the hostname of the server Nginx is running on
-#sudo sed -i 's/server_name _;.*/server_name _;\n\tadd_header X-Served-By \$hostname;/' /etc/nginx/sites-enabled/default 
-sudo apt-get -y update
-sudo apt-get -y install nginx
-sudo ufw allow 'Nginx HTTP'
-sudo mkdir -p /var/www/html /var/www/error
-sudo chmod -R 755 /var/www
+# Configures a new Ubuntu machine to the requirements needed
+apt-get -y update
+apt-get -y install nginx
 echo 'Hello World!' > /var/www/html/index.html
 echo "Ceci n'est pas une page" > /var/www/html/404.html
 server_config=\

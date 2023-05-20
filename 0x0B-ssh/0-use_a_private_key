@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Creates a server
-SERVER="98.98.98.98"
+SERVER="54.87.210.150"
 
 # Creates the username to use for the ssh connection
 USERNAME="ubuntu"
@@ -8,4 +8,4 @@ USERNAME="ubuntu"
 # Set the path to private key
 PRIVATE_KEY="~/.ssh/school"
 
-ssh -i ~/.ssh/school ubuntu@98.98.98.98
+ssh -i ~/.ssh/school ubuntu@54.87.210.150

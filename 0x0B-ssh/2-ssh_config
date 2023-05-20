@@ -2,7 +2,7 @@
 # Configures an ssh file
 
 User ubuntu
-Host 19.204.447.20
+Host 98.98.98.98
 PasswordAuthentications no
 IdentityFile "~/.ssh/school"
 

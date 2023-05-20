@@ -4,5 +4,5 @@
 User ubuntu
 Host 19.204.447.20
 PasswordAuthentications no
-IdentityFile ~/.ssh/school
+IdentityFile "~/.ssh/school"
 

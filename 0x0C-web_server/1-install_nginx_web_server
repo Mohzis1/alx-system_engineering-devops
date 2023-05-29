@@ -6,3 +6,4 @@ sudo apt-get install nginx -y
 ufw allow 'Nginx HTTP'
 echo "Hello World!" > /var/www/html/index.html > /dev/null
 sudo service nginx start
+curl 34.239.207.58

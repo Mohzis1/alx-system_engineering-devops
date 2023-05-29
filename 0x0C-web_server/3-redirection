@@ -1,35 +1,23 @@
 #!/usr/bin/env bash
 # This installs the web server 'nginx' on the server and perform some configurations
 sudo apt-get update -y
-sudo apt-get upgrade -y
 sudo apt-get install nginx -y
-ufw allow 'Nginx HTTP'
 echo "Hello World!" > /var/www/html/index.html
 
 new_website=\
-"server {
+rewrite="server {
         listen 80;
         listen [::]:80;
 
-        server_name mohzis.tech;
-
         root /var/www/html;
-        index index.html index.htm index.nginx-debian.html 404.html;
-        
-        location / {
-                try_files $uri $uri/ =404;
-        }
+        index index.html index.htm index.nginx-debian.html;
 
-        if ($request_filename ~ redirect_me){
-            rewrite ^ https://www.youtube.com/Mohzis permanent;
-        }
+        server_name _;
+	location /redirect_me {
+            return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
 }"
 
-echo "$new_website" > /etc/nginx/sites-available/new_website
-
-if [ "$(pgrep nginx)" -le 0 ];
-then
-    sudo service nginx start
-else
-    sudo service nginx restart
-fi;
+echo -e "$rewrite" > /etc/nginx/sites-available/redirect
+ln -sf /etc/nginx/sites-available/redirect /etc/nginx/sites-enabled/
+sudo nginx -t
+service nginx restart

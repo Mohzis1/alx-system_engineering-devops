@@ -20,8 +20,7 @@ new_website=\
         location =  /404.html {
                 internal;
         }
-        if ($request_filename ~ redirect_me){
-            rewrite ^ https://www.youtube.com/watch?v=QH2-TGUlwu4
+        echo "Ceci n'est pas une page" > new_webite
         }
 }"
 

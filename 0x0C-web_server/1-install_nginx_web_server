@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This installs the web server 'nginx' on the server
 sudo apt-get update -y
+ufw allow 'Nginx HTTP'
 sudo apt-get install nginx -y
 echo "Hello World!" > /var/www/html/index.html > sudo tee /dev/null
 sudo service nginx start
-curl localhost

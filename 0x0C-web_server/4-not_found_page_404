@@ -9,7 +9,7 @@ new_website=\
 "server {
         listen 80;
         listen [::]:80;
-        server_name mohzis.tech;
+        server_name devmohzis.tech;
         root /var/www/html;
         index index.html index.htm index.nginx-debian.html 404.html;
         

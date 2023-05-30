@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
-# This installs the web server 'nginx' on the server and perform some configurations
+# This installs the web server 'nginx' on the server and perform some configuration
+s
 sudo apt-get update -y
 sudo apt-get install nginx -y
 ufw allow 'Nginx HTTP'
 echo "Hello World!" > /var/www/html/index.html
- echo "Ceci n'est pas une page" > /var/www/html/index.html
+echo "Ceci n'est pas une page" > /var/www/html/index.html
  
 new_website=\
 "server {
